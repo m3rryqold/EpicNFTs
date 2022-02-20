@@ -28,6 +28,8 @@ contract MyEpicNFT is ERC721URIStorage {
 
     string[] thirdWords = ["Mask","Nutella","Hat","Pine","Candy","Tofu","Bear","Lamp","Chocolate","Ring","Burger","Lollipop","Pin","Mouse","Bat","Screw","Gate","Seed","Lock","Land","Key","Rock","Paper","Scissors","Slippers","Pants","Tank","Neon","Moon","Earth","Switch","Basket"];
 
+    // event after nft is minted
+    event NewEpicNFTMinted(address sender, uint256 tokenId);
  
     // We need to pass the name of our NFTs token and its symbol
     constructor() ERC721 ("Hunt3rNFT", "Hunt3er") {
@@ -113,5 +115,8 @@ contract MyEpicNFT is ERC721URIStorage {
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
         console.log("NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+
+        // 
+        emit NewEpicNFTMinted(msg.sender, newItemId);
     }
 }
