@@ -1,5 +1,7 @@
 # Basic Sample Hardhat Project
 
+(The smart contracts are deployed on the blockchain. To run this project locally, jump into the front end folder and follow the instructions.)
+
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
 Try running some of the following tasks:
