@@ -87,6 +87,7 @@ contract MyEpicNFT is ERC721URIStorage {
         //we pick a random color and combine with our svg and word
         string memory randomColor = pickRandomColor(newItemId);
         string memory finalSvg = string(abi.encodePacked(svgPartOne, randomColor, svgPartTwo,combinedWord, "</text></svg>"));
+        console.log("SVG->",finalSvg);
 
         //Get all the JSON metadata in place and base64 encode it
         string memory json = Base64.encode(
@@ -124,6 +125,8 @@ contract MyEpicNFT is ERC721URIStorage {
 
         // Set the NFTs data.
         _setTokenURI(newItemId, finalTokenUri);
+        // Use data from IPFS if available
+        // _setTokenURI(newItemId, "ipfs://Qmcawtn8pbdQfbhGFrZRJixg1rixc4fpeAKx7oyoiRg8b5");
 
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();

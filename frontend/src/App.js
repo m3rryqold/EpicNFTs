@@ -10,7 +10,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
-const CONTRACT_ADDRESS = "0xF280E4655ddB1DAD8f6b1F0Eb0bA2729C0e95f30";
+const CONTRACT_ADDRESS = "0xCDFdA4A40f57496Ad39CCfb363D22e555Ab1bA4a";
 
 const App = () => {
 
